@@ -22,7 +22,7 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/articles' element={<ArticlesListPage />} />
-            <Route path='/article' element={<ArticlePage />} />
+            <Route path='/articles/:name' element={<ArticlePage />} />
             <Route path='/*' element={<ErrorPage />} />
           </Routes>
         </div>
