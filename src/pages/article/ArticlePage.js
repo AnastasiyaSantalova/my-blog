@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import articles from './../../mock/articles-mocked';
 import ArticlesList from './../../components/articles-list/ArticlesList'
 import CommentsList from '../../components/comments-list/CommensList';
+import UpvotesSection from '../../components/upvotes-section/UpvotesSection';
 
 const ArticlePage = () => {
 	const url = useParams();
@@ -27,7 +28,7 @@ const ArticlePage = () => {
 	return (
 		<>
 			<h1>{name}</h1>
-			<p>This post has been upvoted {articleInfo.upvotes} times</p>
+			<UpvotesSection articleName={article.url} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
 			<div dangerouslySetInnerHTML={content}></div>
 			<CommentsList comments={articleInfo.comments} />
 			<h3>Other articles:</h3>
