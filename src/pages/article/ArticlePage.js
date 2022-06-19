@@ -4,6 +4,7 @@ import articles from './../../mock/articles-mocked';
 import ArticlesList from './../../components/articles-list/ArticlesList'
 import CommentsList from '../../components/comments-list/CommensList';
 import UpvotesSection from '../../components/upvotes-section/UpvotesSection';
+import CommentForm from '../../components/comment-form/CommentForm';
 
 const ArticlePage = () => {
 	const url = useParams();
@@ -31,6 +32,7 @@ const ArticlePage = () => {
 			<UpvotesSection articleName={article.url} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
 			<div dangerouslySetInnerHTML={content}></div>
 			<CommentsList comments={articleInfo.comments} />
+			<CommentForm articleName={article.url} setArticleInfo={setArticleInfo} />
 			<h3>Other articles:</h3>
 			<ArticlesList articles={articles} count={3} current={article.name} />
 		</>

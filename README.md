@@ -8,6 +8,8 @@ This project related with [my-blog-back](https://github.com/AnastasiyaSantalova/
 
 ## Functionality:
 * Displaying pages, articles and comments
+* Adding upvotes for articles
+* Adding comments
 
 ## Pages:
 * main page
