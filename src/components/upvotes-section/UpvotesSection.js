@@ -1,5 +1,7 @@
 import { Button } from "react-bootstrap";
 
+import './UpvotesSection.css';
+
 const UpvotesSection = ({ articleName, upvotes, setArticleInfo }) => {
 	const upvoteArticle = async () => {
 		const result = await fetch(`/api/articles/${articleName}/upvote`, {

@@ -1,6 +1,8 @@
-.not-found {
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.not-found-page {
+	height: 400px;
+	display: flex;
+	
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

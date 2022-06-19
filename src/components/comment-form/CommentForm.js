@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { Form, Button, Col, Row, FloatingLabel } from 'react-bootstrap';
 
-import { Form, Button, Col, Row, FloatingLabel } from 'react-bootstrap'
+import Subheader from '../subheader/Subheader';
+
+import './CommentForm.css';
 
 const CommentForm = ({ articleName, setArticleInfo }) => {
 	const [userName, setUserName] = useState('');
@@ -20,8 +23,8 @@ const CommentForm = ({ articleName, setArticleInfo }) => {
 	}
 
 	return (
-		<div>
-			<h3>Add comment</h3>
+		<div className='comment-form'>
+			<Subheader name={'Add comment'} />
 			<Form onSubmit={addComment}>
 				<Row className="mb-3">
 					<Form.Group controlId="addCommentName" as={Col} xs={3}>

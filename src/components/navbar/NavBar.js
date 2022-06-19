@@ -2,7 +2,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 const NavBar = () => {
 	return (
-		<>
+		<div>
 			<Navbar bg="dark" variant="dark">
 				<Container>
 					<Navbar.Brand href="/">Nastya's Talks</Navbar.Brand>
@@ -12,7 +12,7 @@ const NavBar = () => {
 					</Nav>
 				</Container>
 			</Navbar>
-		</>
+		</div>
 	)
 }
 

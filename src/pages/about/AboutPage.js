@@ -1,15 +1,19 @@
 import pages from "../../mock/pages-mocked";
 
-const AboutPage = () => {
-    const aboutPage = pages.find(page => page.name === 'about');
-	const pageContent = {__html: aboutPage.content};
+import Header from "../../components/header/Header";
 
-    return (
-        <>
-            <h1>About me</h1>
-            <div dangerouslySetInnerHTML={pageContent}></div>
-        </>
-    )
+import './AboutPage.css';
+
+const AboutPage = () => {
+	const aboutPage = pages.find(page => page.name === 'about');
+	const pageContent = { __html: aboutPage.content };
+
+	return (
+		<div className="about-page">
+			<Header name={'About me'} />
+			<div dangerouslySetInnerHTML={pageContent}></div>
+		</div>
+	)
 }
 
 export default AboutPage;

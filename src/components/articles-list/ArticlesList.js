@@ -1,5 +1,6 @@
-import './ArticlesList.css';
 import ArticleCard from '../article-card/ArticleCard';
+
+import './ArticlesList.css';
 
 const ArticlesList = (props) => {
 	const articles = props.articles;

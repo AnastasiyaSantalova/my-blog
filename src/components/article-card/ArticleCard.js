@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
 import "./ArticleCard.css";
 
 const ArticleCard = props => {
@@ -14,7 +15,7 @@ const ArticleCard = props => {
 			className="mb-2 article-card"
 		>
 			<Card.Body>
-				<Card.Title>
+				<Card.Title className="article-card__title">
 					<Link to={`/articles/${article.url}`}>
 						{article.name}
 					</Link>
