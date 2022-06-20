@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./ArticleCard.css";
 
-const ArticleCard = props => {
-	const article = props.article;
-	const content = {__html: article.content.substr(0,150)+'...'};
+const ArticleCard = ({ article }) => {
+	const content = { __html: article.content.substr(0, 150) + '...' };
 
 	return (
 		<Card

@@ -3,6 +3,7 @@ import articles from "../../mock/articles-mocked";
 
 import ArticlesList from "../../components/articles-list/ArticlesList";
 import Header from "../../components/header/Header";
+import WideCarousel from "../../components/carousel/Carousel";
 
 import './HomePage.css';
 
@@ -12,9 +13,12 @@ const HomePage = () => {
 
 	return (
 		<div className="home-page">
-			<Header name={"Welcome to my blog"} />
-			<div dangerouslySetInnerHTML={pageContent}></div>
-			<ArticlesList articles={articles} count={3} />
+			<WideCarousel articles={articles.slice(0, 3)} />
+			<div className="home-page__content">
+				<Header name={"Welcome to my blog"} />
+				<div dangerouslySetInnerHTML={pageContent}></div>
+				<ArticlesList articles={articles} count={3} />
+			</div>
 		</div>
 	)
 }
