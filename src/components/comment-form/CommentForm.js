@@ -63,16 +63,16 @@ const CommentForm = ({ articleName, setArticleInfo }) => {
 						/>
 					</FloatingLabel>
 				</Form.Group>
-				<Form.Group className="mb-3" controlId="addCommentAgreement">
+				<Form.Group className="mb-3 comment-form__bottom" controlId="addCommentAgreement">
 					<Form.Check
 						type="checkbox"
 						label="Terms and conditions agreement*"
 						required
 					/>
+					<Button variant="primary" type="submit">
+						Add
+					</Button>
 				</Form.Group>
-				<Button variant="primary" type="submit">
-					Add
-				</Button>
 			</Form>
 		</div>
 	)

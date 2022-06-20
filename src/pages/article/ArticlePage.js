@@ -11,6 +11,7 @@ import Header from '../../components/header/Header';
 import Subheader from '../../components/subheader/Subheader';
 
 import './ArticlePage.css';
+import { Image } from 'react-bootstrap';
 
 const ArticlePage = () => {
 	const url = useParams();
@@ -36,7 +37,9 @@ const ArticlePage = () => {
 		<div className='article-page'>
 			<Header name={name} />
 			<UpvotesSection articleName={article.url} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
+			<Image src={article.img} />
 			<div dangerouslySetInnerHTML={content}></div>
+			<UpvotesSection articleName={article.url} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
 			<CommentsList comments={articleInfo.comments} />
 			<CommentForm articleName={article.url} setArticleInfo={setArticleInfo} />
 			<Subheader name={'read also:'} />

@@ -1,4 +1,10 @@
 .comment-form {
 	border: 1px solid lightgrey;
-	padding: 0 5% 5%;
+	padding: 0 5% 2%;
+}
+
+.comment-form__bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 }

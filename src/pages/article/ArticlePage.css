@@ -2,3 +2,8 @@
   padding: 0 15%;
 	text-align: justify;
 }
+
+.article-page img {
+  margin: 10px 0;
+  width: 100%;
+}
